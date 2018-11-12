@@ -8,9 +8,13 @@ import {
   Button, 
   TouchableOpacity,
   TextInput, 
+  KeyboardAvoidingView,
+  ScrollView,
+  Platform,
 } from 'react-native';
 import Icons from './components/Icon';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { LinearGradient } from 'expo';
+import Icon from 'react-native-vector-icons/EvilIcons';
 
 export default class App extends React.Component {
 
@@ -30,44 +34,58 @@ export default class App extends React.Component {
   
   render() {
     return (
-      <View style={styles.container}>
-        <View style={styles.main}>
-          <Image source={require('./public/mainpage4.png')} style={styles.image}/>
-        </View>
-        <View style={styles.icon}>
-          <View style={styles.main}>
-            <Icons />
-            <Text style={styles.title}>
-              NaTUGA
-            </Text>
-          </View>
-          <View style={styles.alignItemsCenter}>
-              <TextInput 
-                style={styles.input}
-                placeholder = 'Adicione a sua localização'   
-              />
-              <Icon.Button 
-                name="map-marker"
-                backgroundColor = "transparent"
-                size={50}
-                onPress={this._onPressButton} 
-              />
-          </View>
-          
-          <View style={styles.buttonInput}>
-            <TouchableOpacity
-              style={styles.buttonContainer}
-              onPress={this._onPressButton}>
-                <Text style={styles.nothank}>
-                  Não, obrigado
-                </Text>
-            </TouchableOpacity>
-          </View>
-          
-        </View>
-       
         
-      </View> 
+        <KeyboardAvoidingView
+          style={{flex: 1}}
+          behavior= "padding"
+        >
+          <LinearGradient colors={['#cccccc','#FF8C00', '#000000']} style={{flex: 1}}>
+            <View style={styles.container}>
+              {
+                //<View style={styles.main}>
+                  //<Image source={require('./public/mainpage4.png')} style={styles.image}/>
+                //</View>
+              }  
+              <View style={styles.icon}>
+                <View style={[styles.main, styles.iconTitle]}>
+                  <Icons />
+                  <Text style={styles.title}>
+                    NaTUGA
+                  </Text>
+                </View>
+                <View style={styles.search}>
+                  <View style={styles.alignItemsCenter}>
+                      <TextInput 
+                        style={styles.input}
+                        placeholder = 'Adicione a sua localização'   
+                        placeholderTextColor= 'rgba(0,0,0,1)'
+                      />
+                      <Icon.Button 
+                        style={styles.iconbutton}
+                        name="location"
+                        color = '#F5F5F5'
+                        backgroundColor = "transparent"
+                        size={50}
+                        onPress={this._onPressButton} 
+                      />
+                  </View>
+                  
+                  <View style={styles.buttonInput}>
+                    <TouchableOpacity
+                      style={styles.buttonContainer}
+                      onPress={this._onPressButton}>
+                        <Text style={styles.nothank}>
+                          Não, obrigado
+                        </Text>
+                    </TouchableOpacity>
+                  </View>
+                </View>
+                
+              </View>
+            
+            </View>
+          </LinearGradient>
+        </KeyboardAvoidingView> 
     );
   }
 }
@@ -79,11 +97,28 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
   },
+
+  iconTitle: {
+    position: 'relative',
+    top: -20,
+  },
+
+  iconbutton: {
+    position: 'relative',
+    paddingRight:0,
+    paddingLeft:0
+  },
+
+  search:{
+    marginTop: 20,
+    position: 'relative',
+  },
+
   container: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    
+    //backgroundColor: 'rgb(230, 130, 0)'
   },
   alignItemsCenter: {
     alignItems: 'center',
@@ -113,14 +148,13 @@ const styles = StyleSheet.create({
   },
 
   input: {
-    backgroundColor: 'rgba(255,255,255,0.3)',
-    borderLeftWidth: 2,
-    borderRightWidth: 2,
-    paddingLeft: 5,
-    paddingRight: 2,
-    borderTopWidth: 2,
-    borderBottomWidth: 2,
-
+    marginLeft:'10%',
+    fontSize: 17,
+    width: '65%',
+    backgroundColor: 'rgba(230,230,230,0.4)',
+    paddingHorizontal: 13,    
+    paddingVertical:10,
+    borderRadius:22,
   },
 
   buttonContainer: {    
@@ -129,7 +163,8 @@ const styles = StyleSheet.create({
 
   nothank: {
     textDecorationLine: 'underline',
-    color: '#FF7700',
+    color: '#F5F5F5',
+    marginTop: '5%'
   },
 
 });
