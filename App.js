@@ -13,6 +13,7 @@ import {
   Platform,
 } from 'react-native';
 import Icons from './components/Icon';
+import Restaurant from './components/Restaurant/Restaurant'
 import { LinearGradient } from 'expo';
 import Icon from 'react-native-vector-icons/EvilIcons';
 
@@ -28,14 +29,16 @@ export default class App extends React.Component {
     this._onPressButton = this._onPressButton.bind(this);
   }
 
+  /* Está tudo comentado e só esta ali restaurant para testar */
+
   _onPressButton() {
     alert("clicked");
   }
   
   render() {
     return (
-        
-        <KeyboardAvoidingView
+        <Restaurant></Restaurant>
+        /*<KeyboardAvoidingView
           style={{flex: 1}}
           behavior= "padding"
         >
@@ -85,7 +88,7 @@ export default class App extends React.Component {
             
             </View>
           </LinearGradient>
-        </KeyboardAvoidingView> 
+            </KeyboardAvoidingView> */
     );
   }
 }
