@@ -16,8 +16,18 @@ import Icons from './components/Icon';
 import Restaurant from './components/Restaurant/Restaurant'
 import { LinearGradient } from 'expo';
 import Icon from 'react-native-vector-icons/EvilIcons';
+import {createStackNavigator, createAppContainer} from 'react-navigation';
+import InfoPage from './components/RestaurantPage/InfoPage';
+import InfoPage2 from './components/RestaurantPage/InfoPage2';
 
-export default class App extends React.Component {
+
+
+class App extends React.Component {
+
+  static navigationOptions = {
+      title: 'Main Page',
+      header: null
+    };  
 
   constructor(props) {
     super(props);
@@ -36,19 +46,17 @@ export default class App extends React.Component {
   }
   
   render() {
+    
+    
+    const {navigate} = this.props.navigation;
+    
     return (
-        <Restaurant></Restaurant>
-        /*<KeyboardAvoidingView
+        <KeyboardAvoidingView
           style={{flex: 1}}
           behavior= "padding"
         >
           <LinearGradient colors={['#cccccc','#FF8C00', '#000000']} style={{flex: 1}}>
             <View style={styles.container}>
-              {
-                //<View style={styles.main}>
-                  //<Image source={require('./public/mainpage4.png')} style={styles.image}/>
-                //</View>
-              }  
               <View style={styles.icon}>
                 <View style={[styles.main, styles.iconTitle]}>
                   <Icons />
@@ -69,14 +77,14 @@ export default class App extends React.Component {
                         color = '#F5F5F5'
                         backgroundColor = "transparent"
                         size={50}
-                        onPress={this._onPressButton} 
+                        onPress={() => navigate('RestaurantsPage')} 
                       />
                   </View>
                   
                   <View style={styles.buttonInput}>
                     <TouchableOpacity
                       style={styles.buttonContainer}
-                      onPress={this._onPressButton}>
+                      onPress={() => navigate('RestaurantsPage')}>
                         <Text style={styles.nothank}>
                           Não, obrigado
                         </Text>
@@ -88,7 +96,7 @@ export default class App extends React.Component {
             
             </View>
           </LinearGradient>
-            </KeyboardAvoidingView> */
+        </KeyboardAvoidingView>
     );
   }
 }
@@ -171,3 +179,20 @@ const styles = StyleSheet.create({
   },
 
 });
+
+const AppNavigator = createStackNavigator({
+  Home: {
+    screen: App,
+  },
+  RestaurantsPage: {
+    screen: Restaurant
+  },
+  InfoPage:{
+    screen: InfoPage
+  },
+  InfoPage2:{
+    screen: InfoPage2
+  }
+});
+
+export default createAppContainer(AppNavigator)
