@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, Button, ScrollView, KeyboardAvoidingView} from 'react-native';
-import InfoImage from './InfoImage.js';
+import { StyleSheet, View, Text, TouchableOpacity, Button, ScrollView, KeyboardAvoidingView,Image,} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {ButtonGroup} from 'react-native-elements';
 import Details from './Details';
@@ -64,11 +63,9 @@ export default class InfoPage2 extends React.Component {
               <View
                 style={{
                   backgroundColor: 'rgba(0,0,0,0)',
-                  width: '100%',
                   position: 'absolute',
                   bottom: -10,
-                  left: 300,
-                  paddingHorizontal: 3,
+                  right: -15,
                   paddingVertical: 3,
                 }}>
                 <Icon.Button
@@ -90,21 +87,21 @@ export default class InfoPage2 extends React.Component {
                     marginLeft: 5,
                     marginTop: 5,
                   }}>
-                  Otto
+                  SushiCome
                 </Text>
                 <Text
                   style={{
+                    position:"absolute",
+                    right:5,
                     marginTop: 5,
                     borderTopWidth: 1,
                     borderLeftWidth: 1,
                     borderRightWidth: 1,
                     borderBottomWidth: 1,
-                    marginLeft: 235,
-                    marginRight: 50,
                     fontSize: 26,
                     color: 'green',
                   }}>
-                  4.4/5
+                  3.8/5
                 </Text>
               </View>
               <Text style={{ color: 'black', fontSize: 18, marginLeft: 5 }}>

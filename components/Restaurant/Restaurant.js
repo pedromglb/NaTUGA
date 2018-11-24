@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image,TouchableOpacity,ScrollView} from 'react-native';
+import { StyleSheet, Text, View, Image,TouchableOpacity,ScrollView,Alert} from 'react-native';
 import { Card, ListItem, Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import NTHeader from '../NTHeader'
@@ -20,12 +20,11 @@ export default class Restaurant extends React.Component {
         this.state = {
           
         };
-    
         this._onPressButton = this._onPressButton.bind(this);
       }
 
     _onPressButton() {
-        alert("clicked");
+        alert("Não Disponivel");
       }
 
     render() {
@@ -34,9 +33,9 @@ export default class Restaurant extends React.Component {
 
         return (
             <View style={{flex:1}}>
-                <NTHeader></NTHeader>
+                <NTHeader ></NTHeader>
                 <ScrollView style={{}}>
-                <TouchableOpacity onPress={() => navigate('InfoPage2')} activeOpacity={0.9} style={{widht:'100%',height: 200,borderBottomWidth:3}}>
+                <TouchableOpacity onPress={() => navigate('InfoPage2')} activeOpacity={0.9} style={{width:'100%',height: 200,borderBottomWidth:3}}>
                     <Image
                         style={{flex:1,height:undefined,width:undefined}}
                         source={require('../../public/SushiCome.jpeg')}
@@ -84,7 +83,7 @@ export default class Restaurant extends React.Component {
                         </View>
                     </View>
                 </TouchableOpacity>
-                    <TouchableOpacity activeOpacity={0.9} onPress={() => navigate('InfoPage')}style={{widht:'100%',height: 200,borderBottomWidth:3}}>
+                    <TouchableOpacity activeOpacity={0.9} onPress={() => navigate('InfoPage')}style={{width:'100%',height: 200,borderBottomWidth:3}}>
                         <Image
                             style={{flex:1,height:undefined,width:undefined}}
                             source={require('../RestaurantPage/otto.png')}
@@ -131,15 +130,62 @@ export default class Restaurant extends React.Component {
                             </View>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity activeOpacity={0.9} style={{widht:'100%',height: 200,borderBottomWidth:3}}>
+                    <TouchableOpacity onPress={()=>{Alert.alert('Página Restaurante','Não Disponivel');}} activeOpacity={0.9} style={{width:'100%',height: 200,borderBottomWidth:3}}>
                         <Image
                             style={{flex:1,height:undefined,width:undefined}}
-                            source={require('../../public/pudins.jpg')}
+                            source={require('../../public/OMiguel.jpeg')}
                         />
                         <View
                             style={{backgroundColor: 'rgba(0,0,0,0.4)',width:'100%',position:'absolute',paddingHorizontal:3,paddingVertical:3}}>
                             <Text style={{color:'white',fontSize: 20}}>
-                                Sitio dos pudins
+                                O Miguel
+                            </Text>
+                        </View>
+                        <View
+                            style={{backgroundColor: 'rgba(0,0,0,0.4)',width:'100%',position:'absolute',bottom:0,right:0,paddingHorizontal:3,paddingVertical:3}}>
+                            <View style={{left:'7%'}}>
+                                <View style={{flexDirection: 'row',alignItems: 'center'}}>
+                                    <View style={{flex:1,flexDirection: 'row'}}>
+                                        <Icon
+                                            name='map-marker' 
+                                            color='white'
+                                        />
+                                        <Text style={{color:'white',fontSize: 10,marginLeft:5}}>
+                                        Setúbal
+                                        </Text>
+                                    </View>
+                                    <View style={{flex:1,flexDirection: 'row'}}>
+                                        <Icon
+                                                style={{}}
+                                                name='euro' 
+                                                color='white'
+                                        />
+                                        <Text style={{color:'white',fontSize: 10,marginLeft:5}}>
+                                        13/pessoa
+                                        </Text>
+                                    </View>
+                                    <View style={{flex:1,flexDirection: 'row'}}>
+                                        <Icon
+                                            name='clock-o' 
+                                            color='white'
+                                        />
+                                        <Text style={{color:'white',fontSize: 10,marginLeft:5}}>
+                                        12h às 23h
+                                        </Text>
+                                    </View>
+                                </View>
+                            </View>
+                        </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={()=>{Alert.alert('Página Restaurante','Não Disponivel');}} activeOpacity={0.9} style={{width:'100%',height: 200,borderBottomWidth:3}}>
+                        <Image
+                            style={{flex:1,height:undefined,width:undefined}}
+                            source={require('../../public/Feitoria.jpeg')}
+                        />
+                        <View
+                            style={{backgroundColor: 'rgba(0,0,0,0.4)',width:'100%',position:'absolute',paddingHorizontal:3,paddingVertical:3}}>
+                            <Text style={{color:'white',fontSize: 20}}>
+                                Feitoria
                             </Text>
                         </View>
                         <View
@@ -162,7 +208,7 @@ export default class Restaurant extends React.Component {
                                                 color='white'
                                         />
                                         <Text style={{color:'white',fontSize: 10,marginLeft:5}}>
-                                        15/pessoa
+                                        110/pessoa
                                         </Text>
                                     </View>
                                     <View style={{flex:1,flexDirection: 'row'}}>
@@ -171,54 +217,7 @@ export default class Restaurant extends React.Component {
                                             color='white'
                                         />
                                         <Text style={{color:'white',fontSize: 10,marginLeft:5}}>
-                                        17h às 23h
-                                        </Text>
-                                    </View>
-                                </View>
-                            </View>
-                        </View>
-                    </TouchableOpacity>
-                    <TouchableOpacity activeOpacity={0.9} style={{widht:'100%',height: 200,borderBottomWidth:3}}>
-                        <Image
-                            style={{flex:1,height:undefined,width:undefined}}
-                            source={require('../../public/pudins.jpg')}
-                        />
-                        <View
-                            style={{backgroundColor: 'rgba(0,0,0,0.4)',width:'100%',position:'absolute',paddingHorizontal:3,paddingVertical:3}}>
-                            <Text style={{color:'white',fontSize: 20}}>
-                                Sushi Tempura
-                            </Text>
-                        </View>
-                        <View
-                            style={{backgroundColor: 'rgba(0,0,0,0.4)',width:'100%',position:'absolute',bottom:0,right:0,paddingHorizontal:3,paddingVertical:3}}>
-                            <View style={{left:'7%'}}>
-                                <View style={{flexDirection: 'row',alignItems: 'center'}}>
-                                    <View style={{flex:1,flexDirection: 'row'}}>
-                                        <Icon
-                                            name='map-marker' 
-                                            color='white'
-                                        />
-                                        <Text style={{color:'white',fontSize: 10,marginLeft:5}}>
-                                        Porto
-                                        </Text>
-                                    </View>
-                                    <View style={{flex:1,flexDirection: 'row'}}>
-                                        <Icon
-                                                style={{}}
-                                                name='euro' 
-                                                color='white'
-                                        />
-                                        <Text style={{color:'white',fontSize: 10,marginLeft:5}}>
-                                        30/pessoa
-                                        </Text>
-                                    </View>
-                                    <View style={{flex:1,flexDirection: 'row'}}>
-                                        <Icon
-                                            name='clock-o' 
-                                            color='white'
-                                        />
-                                        <Text style={{color:'white',fontSize: 10,marginLeft:5}}>
-                                        20h às 23h
+                                        19h às 23h
                                         </Text>
                                     </View>
                                 </View>
@@ -227,7 +226,23 @@ export default class Restaurant extends React.Component {
                     </TouchableOpacity>
                 </ScrollView>
                 {/* Dice button */}
-                <Dice/>
+                <View style={{position:'absolute',bottom:'3%',left:'3%'}}>
+                    <TouchableOpacity
+                        onPress={() => navigate('RestaurantsPage2')}
+                        style={{
+                            borderWidth:1,
+                            borderColor:'rgba(0,0,0,0.4)',
+                            alignItems:'center',
+                            justifyContent:'center',
+                            width:70,
+                            height:70,
+                            backgroundColor:'rgb(60, 60, 60)',
+                            borderRadius:100,
+                            }}
+                    >
+                        <Image style={{width:'100%',height:'100%'}} source={require('../../public/Dice3.png')}/>
+                    </TouchableOpacity>
+                </View>
             </View>   
         );
     }

@@ -2,9 +2,12 @@ import * as React from 'react';
 import { Alert, Button, StyleSheet, Image, View, Text, TouchableOpacity,
          DrawerLayoutAndroid,  Dimensions, Slider, TextInput, CheckBox, Modal, StatusBar } from 'react-native';
 import Smallicon from './Smallicon';
-import { FontAwesome, AntDesign, Ionicons } from '@expo/vector-icons';
-import { SimpleLineIcons, MaterialCommunityIcons, MaterialIcons, EvilIcons } from '@expo/vector-icons';
-
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
+import Ionicons from 'react-native-vector-icons/Ionicons'
+import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons'
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+import EvilIcons from 'react-native-vector-icons/EvilIcons'
 
 export default class NTHeader extends React.Component {
 
@@ -23,8 +26,7 @@ export default class NTHeader extends React.Component {
         };
 
         this._onPressButton = this._onPressButton.bind(this);
-        this._onPressSearch = this._onPressSearch.bind(this);
-        this._onPressUser = this._onPressUser.bind(this);           
+        this._onPressSearch = this._onPressSearch.bind(this);       
         this._onPressEstabelecimentos = this._onPressEstabelecimentos.bind(this);
   }
 
@@ -81,11 +83,6 @@ export default class NTHeader extends React.Component {
         )
   }
 
-
-    _onPressUser() {
-        alert('press');
-    }
-
     setSearchVisible(visible) {
       this.setState({ isOnSearch: visible });
    }
@@ -102,9 +99,8 @@ export default class NTHeader extends React.Component {
     }
 
     render() {
-
-         
-      var screen = Dimensions.get('window'); 
+    
+        var screen = Dimensions.get('window'); 
 
       var modalFiltros = (
              <Modal transparent = {true}
@@ -515,7 +511,7 @@ export default class NTHeader extends React.Component {
         var searchIconFalse = (
             <View style={styles.iconSearchFalse} >
                 <TouchableOpacity style={styles.buttonContainer} onPress={this._onPressSearch}>
-                    < AntDesign name="search1" size={30} />
+                    < EvilIcons name="search" size={40} />
                 </TouchableOpacity>
             </View>
         );
@@ -523,7 +519,7 @@ export default class NTHeader extends React.Component {
         var searchIconTrue = (
             <View style={styles.iconSearchTrue} >
                 <TouchableOpacity style={styles.buttonContainer} onPress={this._onPressSearch}>
-                    < AntDesign name="search1" size={30} />
+                    < EvilIcons name="search" size={40} />
                 </TouchableOpacity>
             </View>
         ); 
