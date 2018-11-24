@@ -1,5 +1,6 @@
 import React from 'react';
 import { 
+  Alert,
   StyleSheet, 
   Text, 
   View, 
@@ -72,6 +73,7 @@ class App extends React.Component {
                 <View style={styles.search}>
                   <View style={styles.alignItemsCenter}>
                       <TextInput 
+                        onSubmitEditing={()=>{Alert.alert('Pesquisa','Não Disponivel');}}
                         style={styles.input}
                         placeholder = 'Adicione a sua localização'   
                         placeholderTextColor= 'rgba(0,0,0,1)'

@@ -4,6 +4,14 @@ import { FontAwesome, SimpleLineIcons, MaterialCommunityIcons } from '@expo/vect
 import { Ionicons, MaterialIcons, AntDesign, EvilIcons } from '@expo/vector-icons';
 
 class MenuRegister extends Component {
+
+    static navigationOptions = {
+        title: 'Registar Estabelecimento',
+        headerStyle: {
+          backgroundColor: '#FF7700',
+        }
+      };  
+
   constructor(props) {
     super(props);
 
@@ -41,6 +49,8 @@ class MenuRegister extends Component {
 
    render() {
  
+    const {navigate} = this.props.navigation;
+
       return (
         <KeyboardAvoidingView
           style={{flex: 1}}
@@ -94,7 +104,7 @@ class MenuRegister extends Component {
             </View>
 
               
-              <TouchableOpacity onPress= {() => {alert('Validar');}} 
+              <TouchableOpacity onPress= {() => navigate('Register2')}
                                 style = {{  
                                          width: 150, height: 40, borderWidth: 2, 
                                         borderColor: '#BC5800', justifyContent: 'center',

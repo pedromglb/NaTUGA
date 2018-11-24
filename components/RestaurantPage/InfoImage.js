@@ -5,7 +5,7 @@ export default class InfoImage extends React.Component {
     return(
       <Image
         source={require('./otto.png')}
-        style={{flex:1,height:undefined,width:undefined}}
+        style={{flex:1, height: undefined, width: undefined}}
       />
     ); 
   }

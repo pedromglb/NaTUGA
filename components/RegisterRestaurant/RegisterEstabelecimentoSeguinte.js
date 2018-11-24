@@ -4,6 +4,14 @@ import { FontAwesome, SimpleLineIcons, MaterialCommunityIcons } from '@expo/vect
 import { Ionicons, MaterialIcons, AntDesign, EvilIcons, Feather } from '@expo/vector-icons';
 
 class RegisterEstabelecimentoSeguinte extends Component {
+
+      static navigationOptions = {
+            title: 'Registar Estabelecimento',
+            headerStyle: {
+              backgroundColor: '#FF7700',
+            }
+          };  
+
   constructor(props) { 
     super(props);
 
@@ -17,6 +25,8 @@ class RegisterEstabelecimentoSeguinte extends Component {
 
    render() {
  
+      const {navigate} = this.props.navigation;
+
       return (
         <ScrollView>
         <View>
@@ -32,19 +42,19 @@ class RegisterEstabelecimentoSeguinte extends Component {
 
             <View style = {{flexDirection: 'row'}} >
 
-                   <TouchableOpacity onPress= {() => {Alert.alert('Adicionar Fotos da Comida','Não está implementado');}}  style = { styles.viewFoto  } >
+                   <TouchableOpacity onPress= {() => {Alert.alert('Adicionar Fotos da Comida','Não está disponivel');}}  style = { styles.viewFoto  } >
                         < SimpleLineIcons name="camera" size={50} style = {{}}/>
                         < Text >Comida</ Text>
                   
                   </TouchableOpacity>  
                   
 
-                  <TouchableOpacity onPress= {() => {Alert.alert('Adicionar Fotos do Ambiente','Não está implementado');}}  style = { styles.viewFoto  } >
+                  <TouchableOpacity onPress= {() => {Alert.alert('Adicionar Fotos do Ambiente','Não está disponivel');}}  style = { styles.viewFoto  } >
                         < SimpleLineIcons name="camera" size={50} style = {{}}/>
                         < Text >Ambiente</ Text>
                   </TouchableOpacity>  
 
-                   <TouchableOpacity onPress= {() => {Alert.alert('Adicionar Outras Fotos','Não está implementado');}}  style = { styles.viewFoto  } >
+                   <TouchableOpacity onPress= {() => {Alert.alert('Adicionar Outras Fotos','Não está disponivel');}}  style = { styles.viewFoto  } >
                         < Feather name="plus" size={50} style = {{}}/>
            
                   </TouchableOpacity>  
@@ -55,24 +65,24 @@ class RegisterEstabelecimentoSeguinte extends Component {
             </View>
 
             <View style = {{flexDirection: 'row'}} >
-                  <TouchableOpacity onPress= {() => {Alert.alert('Adicionar Fotos do Menu','Não está implementado');}}  style = { styles.viewFoto  } >
+                  <TouchableOpacity onPress= {() => {Alert.alert('Adicionar Fotos do Menu','Não está disponivel');}}  style = { styles.viewFoto  } >
                         < SimpleLineIcons name="camera" size={50} style = {{}}/>
                   </TouchableOpacity>   
 
-                  <TouchableOpacity onPress= {() => {Alert.alert('Adicionar Mais Fotos','Não está implementado');}}  style = { styles.viewFoto  } >
+                  <TouchableOpacity onPress= {() => {Alert.alert('Adicionar Mais Fotos','Não está disponivel');}}  style = { styles.viewFoto  } >
                         < Feather name="plus" size={50} style = {{}}/>
                   </TouchableOpacity>   
    
             </View>
 
-              <TouchableOpacity onPress= {() => {alert('Adicionar Menu');}} 
+              <TouchableOpacity onPress= {() => navigate('Register3')} 
                                 style = {{ flex: 1, width: '90%', height: 40, borderWidth: 2, 
                                         borderColor: 'black', justifyContent: 'center', backgroundColor: '#686868',
                                         marginLeft: 15, marginTop: 30 }}>
                             <Text style = {{ fontSize: 20, textAlign: 'center', color: 'white'}}> Adicionar Menu Interativo </Text>
               </TouchableOpacity>          
 
-              <TouchableOpacity onPress= {() => {alert('Validar');}} 
+              <TouchableOpacity onPress= {() => {navigate('RestaurantsPage');Alert.alert('Registo Restaurante','Iremos analisar o seu pedido de registo, mais tarde irá receber um email de confirmação');}} 
                      style = {{width: 150, height: 40, borderWidth: 2, 
                                         borderColor: '#BC5800', justifyContent: 'center', backgroundColor: '#ff7700',
                                         marginBottom: 20, marginLeft: 190, marginTop: 20,  }} >

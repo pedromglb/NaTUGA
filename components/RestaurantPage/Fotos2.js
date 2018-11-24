@@ -7,19 +7,19 @@ export default class Fotos extends React.Component {
       <View>
         <Image
           style={{flex:1, height: 250, width: '100%'}}
-          source={require('./otto2.png')}
+          source={require('./sushi.png')}
         />
         <Image
           style={{flex:1, height: 250, width: '100%'}}
-          source={require('./otto5.png')}
+          source={require('./sushi2.png')}
         />
         <Image
           style={{flex:1, height: 250, width: '100%'}}
-          source={require('./otto4.png')}
+          source={require('./sushi3.png')}
         />
         <Image
           style={{flex:1, height: 250, width: '100%'}}
-          source={require('./otto3.png')}
+          source={require('./sushi4.png')}
         />
       </View>
     );

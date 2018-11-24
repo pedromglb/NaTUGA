@@ -3,7 +3,7 @@ import { View, Text, Image, TouchableOpacity } from 'react-native';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-export default class Details extends React.Component {
+export default class Details2 extends React.Component {
   render(){
     return(
       <View style={{flex: 1}}>
@@ -21,15 +21,15 @@ export default class Details extends React.Component {
           <Icon name={'phone'} size={30} color="white" />
           </TouchableOpacity>
 
-          <Text style={{marginTop: 15, marginLeft:5, fontSize: 18}}>308 807 235</Text>
+          <Text style={{marginTop: 15, marginLeft:5, fontSize: 18}}>212 741 236</Text>
         </View>
         <View style={{flex:1, marginTop: 20, marginLeft: 10}}>
           <Text style={{fontSize: 16, fontWeight: 'bold'}} > Morada: </Text>
-          <Text style={{fontSize: 16, width: '100%' ,marginLeft: 5}}>Praça Dom Luis I, 34, Loja 9, Cais do Sodré, Lisboa</Text>
+          <Text style={{fontSize: 16, width: '100%' ,marginLeft: 5}}>Praça da Liberdade, Loja 2, Almada Centro, Almada Centro, Almada</Text>
         </View>
         <View style={{marginTop: 15, flexDirection:'row'}}>
           <Text style={{fontSize: 16, fontWeight: 'bold', marginLeft: 10}}>Custo médio:</Text>
-          <Text style={{fontSize: 15}}> 12,5€ por pessoa(aprox.)</Text>
+          <Text style={{fontSize: 15}}> 15€ por pessoa(aprox.)</Text>
         </View>
 
         <View style={{flex:1, marginTop: 5}}>
@@ -41,11 +41,11 @@ export default class Details extends React.Component {
           <Icon name={'check'} size={20} style={{marginLeft: 10}}/>
           <Text>Tem Wifi</Text>
           <Icon name={'check'} size={20} style={{marginLeft: 10}}/>
-          <Text>Tem vinho a copo</Text>
+          <Text>Tem Take-Away</Text>
         </View>
-        <View style={{marginLeft: 10, flexDirection:'row',marginBottom: 20}}>
+        <View style={{marginLeft: 10, flexDirection:'row', marginBottom: 20}}>
           <Icon name={'check'} size={20}/>
-          <Text>Cozinha Italiana</Text> 
+          <Text>Cozinha Japonesa/Chinesa</Text> 
         </View>   
       </View> 
 

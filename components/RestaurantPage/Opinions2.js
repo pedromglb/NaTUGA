@@ -2,7 +2,7 @@ import * as React from 'react';
 import {StyleSheet, View, Text, TouchableOpacity, Button, TextInput, Alert} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-export default class Opinions extends React.Component {
+export default class Opinions2 extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -122,17 +122,17 @@ export default class Opinions extends React.Component {
         <View style={{marginTop: 10, padding:0, marginLeft:5, flexDirection:'row'}}>
           <Icon name={"account-circle"} size={40}/>
           <View style={{borderWidth:1, borderColor:"grey", width: 305, marginTop:15, marginBottom: 20}}>
-            <Text>Ambiente fantástico e atendimento exceptional. </Text>
+            <Text>Comida razoavel, podia ser melhor </Text>
             <Text></Text>
-            <Text>Ambiente:4  Comida:3  Higiene:4  Servico:4 </Text>
+            <Text>Ambiente:2  Comida:3  Higiene:2  Servico:2 </Text>
           </View>
         </View>
         <View style={{marginTop: 10, padding:0, marginLeft:5, flexDirection:'row'}}>
           <Icon name={"account-circle"} size={40}/>
             <View style={{borderWidth:1, borderColor:"grey", width: 305, marginTop:15, marginBottom: 20}}>
-            <Text>Bom espaço, com um agradável pátio interior. Boas pizzas e a carta de vinhos a preços apelativos</Text>
+            <Text>Sushi claramente fora do prazo</Text>
             <Text></Text>
-            <Text>Ambiente:3  Comida:4  Higiene:4  Servico:3 </Text>
+            <Text>Ambiente:2 Comida:1  Higiene:1 Servico:2 </Text>
           </View>
         </View>
       </View>

@@ -547,7 +547,59 @@ export default class NTHeader extends React.Component {
                   {modalFiltros}         
                   {modalFiltrosCozinha}
                   {modalFiltrosEstabelecimento}
-                  {modalUser}
+                  <Modal transparent={true}
+                    animationType="fade"
+                    visible={this.state.modalVisible}
+                    onRequestClose={() => { this.setModalVisible(false) }}  >
+
+
+
+                    <View style={styles.modalUserIcon}>
+                    
+                        <View style={{ position: 'absolute', bottom: '80%', left: '5%', flexDirection: 'row' }}>
+                            < SimpleLineIcons name="home" size={20} style={{ top: '5%' }} />
+                            <Text style={styles.modalText}> A Minha Conta </Text>
+                        </View>
+
+
+                        <View style={{ position: 'absolute', bottom: '63%', left: '5%', flexDirection: 'row' }}>
+                            < MaterialCommunityIcons name="silverware-variant" size={20} style={{ top: '5%' }} />
+                            <Text style={styles.modalText}> Meus Estabelecimentos </Text>
+                        </View>
+
+                        <TouchableOpacity onPress={this.props.navigation.navigate('Register')}
+                            style={{ position: 'absolute', bottom: '45%', left: '5%' }}
+                        >
+
+                            <View style={{ flexDirection: 'row' }} >
+                                <MaterialIcons name="add-circle-outline" size={20} style={{ top: '5%' }} />
+                                <Text style={styles.modalText}> Registar Estabelecimentos </Text>
+
+                            </View>
+
+                        </TouchableOpacity>
+
+                        <View style={{ position: 'absolute', bottom: '25%', left: '5%', flexDirection: 'row' }}>
+                            < SimpleLineIcons name="settings" size={20} style={{ top: '10%' }} />
+                            <Text style={styles.modalText}> Definições </Text>
+                        </View>
+
+                        <TouchableOpacity onPress={() => {
+                            this.setModalVisible(!this.state.modalVisible) }}
+                            style={{ position: 'absolute', bottom: '5%', left: '5%' }}
+                        >
+
+                            <View style={{ flexDirection: 'row' }} >
+                                <SimpleLineIcons name="power" size={20} style={{ top: '15%' }} />
+                                <Text style={styles.modalText}> Sair </Text>
+
+                            </View>
+
+                        </TouchableOpacity>
+
+                    </View>
+
+                </Modal>
 
                 <View style={styles.iconFilter} >
                     <TouchableOpacity style={styles.buttonContainer} onPress={this._onPressButton}>

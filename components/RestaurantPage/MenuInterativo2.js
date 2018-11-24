@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import IconP from 'react-native-vector-icons/Ionicons';
 import IconS from 'react-native-vector-icons/Entypo';
 
-export default class MenuInterativo extends React.Component {
+export default class MenuInterativo2 extends React.Component {
    constructor(props) {
     super(props);
 
@@ -59,10 +59,10 @@ export default class MenuInterativo extends React.Component {
                 onValueChange = {this.updatePickerPrato1}
          >
           <Picker.Item label= 'Selecione uma Opção' value = {0} />
-          <Picker.Item label= 'Burrata con Pomodorini - 8.00€' value = {8} />
-          <Picker.Item label = "Carpaccio di Vitello con Limone - 11.00€" value = {11} />
-          <Picker.Item label = "Funghi in Camicia e Scaglie - 10.50€" value = {10.5} />
-          <Picker.Item label = "Insalata di Pollo con Verdure - 10.50€" value = {10.5} />
+          <Picker.Item label= 'Sashimi de Salmão 4p - 5.50€' value = {5.5} />
+          <Picker.Item label = "Nigiri de Robalo 4p - 6.50€" value = {6.5} />
+          <Picker.Item label = "Maki de Gambas Panadas 3p - 6.00€" value = {6} />
+          <Picker.Item label = "Califórnia de Atum 3p - 6.00€" value = {6} />
           
         </Picker>
 
@@ -72,10 +72,10 @@ export default class MenuInterativo extends React.Component {
          >
           
           <Picker.Item label= 'Selecione uma Opção' value = {0} />
-          <Picker.Item label= 'Burrata con Pomodorini - 8.00€' value = {8} />
-          <Picker.Item label = "Carpaccio di Vitello con Limone - 11.00€" value = {11} />
-          <Picker.Item label = "Funghi in Camicia e Scaglie - 10.50€" value = {10.5} />
-          <Picker.Item label = "Insalata di Pollo con Verdure - 10.50€" value = {10.5} />
+          <Picker.Item label= 'Sashimi de Salmão 4p - 5.50€' value = {5.5} />
+          <Picker.Item label = "Nigiri de Robalo 4p - 6.50€" value = {6.5} />
+          <Picker.Item label = "Maki de Gambas Panadas 3p - 6.00€" value = {6} />
+          <Picker.Item label = "Califórnia de Atum 3p - 6.00€" value = {6} />
                
           
         </Picker>
@@ -91,10 +91,10 @@ export default class MenuInterativo extends React.Component {
                 onValueChange = {this.updatePickerSob1}
          >
           <Picker.Item label= 'Selecione uma Opção' value = {0} />
-          <Picker.Item label= 'Tiramisú - 4.20€' value = {4.2} />
-          <Picker.Item label = "Salame di Cioccolato - 3.50€" value = {3.5} />
-          <Picker.Item label = "Moousse di Cioccolato - 4.00€" value = {4} />
-          <Picker.Item label = "Cheesecake - 4.20€" value = {4.2} />
+          <Picker.Item label= 'Sago Doce Manga - 2.50€' value = {2.5} />
+          <Picker.Item label = "Banana na Chapa - 3.50€" value = {3.5} />
+          <Picker.Item label = "Gelado Chá Verde - 2.50€" value = {2.5} />
+          <Picker.Item label = "Bolo Sésamo - 2.50€" value = {2.5} />
           
         </Picker>
 
@@ -103,10 +103,10 @@ export default class MenuInterativo extends React.Component {
                 onValueChange = {this.updatePickerSob2}
          >
           <Picker.Item label= 'Selecione uma Opção' value = {0} />
-          <Picker.Item label= 'Tiramisú - 4.20€' value = {4.2} />
-          <Picker.Item label = "Salame di Cioccolato - 3.50€" value = {3.5} />
-          <Picker.Item label = "Moousse di Cioccolato - 4.00€" value = {4} />
-          <Picker.Item label = "Cheesecake - 4.20€" value = {4.2} />
+          <Picker.Item label= 'Sago Doce Manga - 2.50€' value = {2.5} />
+          <Picker.Item label = "Banana na Chapa - 3.50€" value = {3.5} />
+          <Picker.Item label = "Gelado Chá Verde - 2.50€" value = {2.5} />
+          <Picker.Item label = "Bolo Sésamo - 2.50€" value = {2.5} />
                
           
         </Picker>
@@ -123,10 +123,10 @@ export default class MenuInterativo extends React.Component {
                 onValueChange = {this.updatePickerBeb1}
          >
           <Picker.Item label= 'Selecione uma Opção' value = {0} />
-          <Picker.Item label= 'Sangria 1L Branca - 13.00€' value = {13} />
-          <Picker.Item label = "Sangria 1L Espumante - 15.00€" value = {15} />
-          <Picker.Item label = "Limonate Manjericão - 3.00€" value = {3} />
-          <Picker.Item label = "Acqua Vitalis 37,5cl. - 1.50€" value = {1.5} />
+          <Picker.Item label= 'Sakerinha - 3.00€' value = {3} />
+          <Picker.Item label = "Sake (quente ou frio) - 3.50€" value = {3.5} />
+          <Picker.Item label = "Cerveja Japonesa - 2.90€" value = {2.9} />
+          <Picker.Item label = "Calpis - 2.50€" value = {2.5} />
           
         </Picker>
 
@@ -135,10 +135,10 @@ export default class MenuInterativo extends React.Component {
                 onValueChange = {this.updatePickerBeb2}
          >
           <Picker.Item label= 'Selecione uma Opção' value = {0} />
-          <Picker.Item label= 'Sangria 1L Branca - 13.00€' value = {13} />
-          <Picker.Item label = "Sangria 1L Espumante - 15.00€" value = {15} />
-          <Picker.Item label = "Limonate Manjericão - 3.00€" value = {3} />
-          <Picker.Item label = "Acqua Vitalis 37,5cl. - 1.50€" value = {1.5} />
+          <Picker.Item label= 'Sakerinha - 3.00€' value = {3} />
+          <Picker.Item label = "Sake (quente ou frio) - 3.50€" value = {3.5} />
+          <Picker.Item label = "Cerveja Japonesa - 2.90€" value = {2.9} />
+          <Picker.Item label = "Calpis - 2.50€" value = {2.5} />
                
           
         </Picker>
@@ -156,10 +156,10 @@ export default class MenuInterativo extends React.Component {
                 onValueChange = {this.updatePickerEn1}
          >
           <Picker.Item label= 'Selecione uma Opção' value = {0} />
-          <Picker.Item label= 'Grissinis - 2.00€' value = {2} />
-          <Picker.Item label = "Azeitonas Marinadas - 2.50€" value = {2.5} />
-          <Picker.Item label = "Crostine de Alho - 3.00€" value = {3} />
-          <Picker.Item label = "Bruscheta - 2.50€" value = {2.5} />
+          <Picker.Item label= 'Sopa Omiso - 3.00€' value = {3} />
+          <Picker.Item label = "Crepes Vegetais - 2.50€" value = {2.5} />
+          <Picker.Item label = "Crepes Gambas - 3.50€€" value = {3.5} />
+          <Picker.Item label = "Guiozes - 2.50€" value = {2.5} />
           
         </Picker>
 
@@ -168,10 +168,10 @@ export default class MenuInterativo extends React.Component {
                 onValueChange = {this.updatePickerEn2}
          >
           <Picker.Item label= 'Selecione uma Opção' value = {0} />
-          <Picker.Item label= 'Grissinis - 2.00€' value = {2} />
-          <Picker.Item label = "Azeitonas Marinadas - 2.50€" value = {2.5} />
-          <Picker.Item label = "Crostine de Alho - 3.00€" value = {3} />
-          <Picker.Item label = "Bruscheta - 2.50€" value = {2.5} />
+          <Picker.Item label= 'Sopa Omiso - 3.00€' value = {3} />
+          <Picker.Item label = "Crepes Vegetais - 2.50€" value = {2.5} />
+          <Picker.Item label = "Crepes Gambas - 3.50€€" value = {3.5} />
+          <Picker.Item label = "Guiozes - 2.50€" value = {2.5} />
                
           
         </Picker>
